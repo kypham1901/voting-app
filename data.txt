@@ -2,3 +2,7 @@
 2 Approaches:
     1. pods and services
     2. deployments and services
+
+Open 2 apps in browser: (get address)
+    1. minikube service result-service --url
+    2. minikube service voting-service --url
