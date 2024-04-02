@@ -1,0 +1,4 @@
+
+2 Approaches:
+    1. pods and services
+    2. deployments and services
