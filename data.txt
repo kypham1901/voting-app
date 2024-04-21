@@ -3,6 +3,14 @@
     1. pods and services
     2. deployments and services
 
+We deployed PODs and services to keep it really simple. But this has its own challenges. Deploying PODs doesn’t help us scale our application easily. Also if a POD was to fail it doesn’t come back up or deploy a new POD automatically. We could deploy multiple PODs one after the other, but there are easier ways to scale using ReplicaSets and Deployments.
+We chose deployments over ReplicaSets as Deployments automatically create replica sets as required and it can help us perform rolling updates and roll backs etc. Deployments are the way to go. So we add more PODs for the front end applications voting-app and result-app by creating a deployment with 3 replicas. We also encapsulate database and workers in deployments.
+
+
+
 Open 2 apps in browser: (get address)
     1. minikube service result-service --url
     2. minikube service voting-service --url
+
+
+KodeKloud repo: https://github.com/kodekloudhub/example-voting-app/tree/master/k8s-specifications
